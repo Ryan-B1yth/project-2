@@ -2,10 +2,17 @@ html, body {
     margin: 0; 
     padding: 0;
     box-sizing: border-box;
-    height: fit-content;
+    max-width: 200%;
+    /* border: 1px solid red; */
+    overflow-x: scroll;
+    
 }
 
 img {
-    height: 200%;
-    width: 200%;
+    height: 100%;
 }
+
+img::-webkit-scrollbar {
+    width: 0px;
+}
+
