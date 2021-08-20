@@ -9,6 +9,29 @@ let locations = [
     }
 ]
 
-if (locations[0].discovered === true) {
-    console.log(`${locations[0].name} discovered`)
+function openKingsLandingInfo() {
+    let info = document.getElementById('kings-landing');
+    info.innerHTML = `
+        <button id="kings-landing-close" class="close" event="click">Close</button>
+        <h2>Kings Landing</h2>
+        <ul>
+            <li>House:</li>
+            <li>Distance to travel:</li>
+            <li>Discovered:</li>
+        </ul>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate nihil quas ratione molestiae cum sunt optio enim at aut similique reprehenderit, architecto quia ea sed laboriosam placeat atque asperiores aliquid!</p>
+    </div>
+    `
+    info.style.visibility = 'visible';
 }
+
+function closeKingsLanding() {
+    console.log('Closed Kings Landing')
+    let info = document.getElementsById('kings-landing');
+    info.innerHTML = ``;
+    
+}
+
+document.getElementById('kings-landing-locator').addEventListener('click', openKingsLandingInfo);
+
+document.getElementById('kings-landing-close').addEventListener('click', closeKingsLanding);
