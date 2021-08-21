@@ -1,3 +1,13 @@
+/**
+ * To add new location:
+ *  funtion:
+ *  name:
+ *  house: 
+ *  information:  
+ *  distanceToUser:
+ *  currentlyLocated:
+ *  discovered:
+ */
 let locations = [
     {
         function: 'KingsLanding',
@@ -17,6 +27,16 @@ let locations = [
         information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
         distanceToUser: 456,
         currentlyLocated: true,
+        discovered: false,
+    }, 
+
+    {
+        function: 'Eyrie',
+        name: 'eyrie',
+        house: 'find it out',
+        information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
+        distanceToUser: 264,
+        currentlyLocated: false,
         discovered: false,
     }
 ]
@@ -61,6 +81,16 @@ function closeWinterfell() {
     closeInfo(1);
 }
 
+function openEyrieInfo() {
+    openInfo(2);
+}
+
+function closeEyrie() {
+    closeInfo(2);
+}
+
 document.getElementById('kings-landing-locator').addEventListener('click', openKingsLandingInfo);
 
 document.getElementById('winterfell-locator').addEventListener('click', openWinterfellInfo);
+
+document.getElementById('eyrie-locator').addEventListener('click', openEyrieInfo);
