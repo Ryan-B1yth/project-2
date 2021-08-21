@@ -1,15 +1,17 @@
 let locations = [
     {
-    name: 'kings-landing',
-    house: 'stark',
-    information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
-    distanceToUser: 123,
-    currentlyLocated: false,
-    discovered: true,
+        function: 'KingsLanding',
+        name: 'kings-landing',
+        house: 'stark',
+        information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
+        distanceToUser: 123,
+        currentlyLocated: false,
+        discovered: true,
 
     },
 
     {
+        function: 'Winterfell',
         name: 'winterfell',
         house: 'stark',
         information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
@@ -22,7 +24,7 @@ let locations = [
 function openInfo(i) {
     let info = document.getElementById(locations[i].name);
     info.innerHTML = `
-        <button id="${locations[i].name}-close" class="close" onclick="closeKingsLanding()">Close</button>
+        <button id="${locations[i].name}-close" class="close" onclick="close${locations[i].function}()">Close</button>
         <h2>${locations[i].name}</h2>
         <ul>
             <li>House: ${locations[i].house}</li>
@@ -51,11 +53,14 @@ function closeKingsLanding() {
     closeInfo(0);
 }
 
-// function closeKingsLanding() {
-//     let close = document.getElementById('kings-landing-close');
-//     let closeSecond = document.getElementById('kings-landing');
-//     close.parentNode.innerHTML = null;
-//     closeSecond.style.visibility = 'hidden';   
-// }
+function openWinterfellInfo() {
+    openInfo(1);
+}
+
+function closeWinterfell() {
+    closeInfo(1);
+}
 
 document.getElementById('kings-landing-locator').addEventListener('click', openKingsLandingInfo);
+
+document.getElementById('winterfell-locator').addEventListener('click', openWinterfellInfo);
