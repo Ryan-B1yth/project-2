@@ -12,7 +12,7 @@ let locations = [
 function openKingsLandingInfo() {
     let info = document.getElementById('kings-landing');
     info.innerHTML = `
-        <button id="kings-landing-close" class="close" event="click">Close</button>
+        <button id="kings-landing-close" class="close" onclick="closeKingsLanding()">Close</button>
         <h2>Kings Landing</h2>
         <ul>
             <li>House:</li>
@@ -23,15 +23,14 @@ function openKingsLandingInfo() {
     </div>
     `
     info.style.visibility = 'visible';
+    return true;
 }
 
 function closeKingsLanding() {
-    console.log('Closed Kings Landing')
-    let info = document.getElementsById('kings-landing');
-    info.innerHTML = ``;
-    
+    let close = document.getElementById('kings-landing-close');
+    let closeSecond = document.getElementById('kings-landing');
+    close.parentNode.innerHTML = null ;
+    closeSecond.style.visibility = 'hidden';   
 }
 
 document.getElementById('kings-landing-locator').addEventListener('click', openKingsLandingInfo);
-
-document.getElementById('kings-landing-close').addEventListener('click', closeKingsLanding);
