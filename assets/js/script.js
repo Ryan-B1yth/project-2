@@ -7,6 +7,15 @@ let locations = [
     currentlyLocated: false,
     discovered: true,
 
+    },
+
+    {
+        name: 'winterfell',
+        house: 'stark',
+        information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
+        distanceToUser: 456,
+        currentlyLocated: true,
+        discovered: false,
     }
 ]
 
@@ -27,15 +36,26 @@ function openInfo(i) {
     return true;
 }
 
+function closeInfo(i) {
+    let close = document.getElementById(`${locations[i].name}-close`);
+    let closeSecond = document.getElementById(`${locations[i].name}`);
+    close.parentNode.innerHTML = null;
+    closeSecond.style.visibility = 'hidden'; 
+}
+
 function openKingsLandingInfo() {
     openInfo(0);
 }
 
 function closeKingsLanding() {
-    let close = document.getElementById('kings-landing-close');
-    let closeSecond = document.getElementById('kings-landing');
-    close.parentNode.innerHTML = null;
-    closeSecond.style.visibility = 'hidden';   
+    closeInfo(0);
 }
+
+// function closeKingsLanding() {
+//     let close = document.getElementById('kings-landing-close');
+//     let closeSecond = document.getElementById('kings-landing');
+//     close.parentNode.innerHTML = null;
+//     closeSecond.style.visibility = 'hidden';   
+// }
 
 document.getElementById('kings-landing-locator').addEventListener('click', openKingsLandingInfo);
