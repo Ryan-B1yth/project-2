@@ -10,21 +10,25 @@ let locations = [
     }
 ]
 
-function openKingsLandingInfo() {
-    let info = document.getElementById(locations[0].name);
+function openInfo(i) {
+    let info = document.getElementById(locations[i].name);
     info.innerHTML = `
-        <button id="${locations[0].name}-close" class="close" onclick="closeKingsLanding()">Close</button>
-        <h2>${locations[0].name}</h2>
+        <button id="${locations[i].name}-close" class="close" onclick="closeKingsLanding()">Close</button>
+        <h2>${locations[i].name}</h2>
         <ul>
-            <li>House: ${locations[0].house}</li>
-            <li>Distance to travel: ${locations[0].distanceToUser} miles</li>
-            <li>Discovered: ${locations[0].discovered}</li>
+            <li>House: ${locations[i].house}</li>
+            <li>Distance to travel: ${locations[i].distanceToUser} miles</li>
+            <li>Discovered: ${locations[i].discovered}</li>
         </ul>
-        <p>${locations[0].information}</p>
+        <p>${locations[i].information}</p>
     </div>
     `
     info.style.visibility = 'visible';
     return true;
+}
+
+function openKingsLandingInfo() {
+    openInfo(0);
 }
 
 function closeKingsLanding() {
