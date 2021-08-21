@@ -1,7 +1,8 @@
 let locations = [
     {
-    name: 'Kings Landing',
-    information: 'lorem ipsum',
+    name: 'kings-landing',
+    house: 'stark',
+    information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
     distanceToUser: 123,
     currentlyLocated: false,
     discovered: true,
@@ -10,16 +11,16 @@ let locations = [
 ]
 
 function openKingsLandingInfo() {
-    let info = document.getElementById('kings-landing');
+    let info = document.getElementById(locations[0].name);
     info.innerHTML = `
-        <button id="kings-landing-close" class="close" onclick="closeKingsLanding()">Close</button>
-        <h2>Kings Landing</h2>
+        <button id="${locations[0].name}-close" class="close" onclick="closeKingsLanding()">Close</button>
+        <h2>${locations[0].name}</h2>
         <ul>
-            <li>House:</li>
-            <li>Distance to travel:</li>
-            <li>Discovered:</li>
+            <li>House: ${locations[0].house}</li>
+            <li>Distance to travel: ${locations[0].distanceToUser} miles</li>
+            <li>Discovered: ${locations[0].discovered}</li>
         </ul>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate nihil quas ratione molestiae cum sunt optio enim at aut similique reprehenderit, architecto quia ea sed laboriosam placeat atque asperiores aliquid!</p>
+        <p>${locations[0].information}</p>
     </div>
     `
     info.style.visibility = 'visible';
@@ -29,7 +30,7 @@ function openKingsLandingInfo() {
 function closeKingsLanding() {
     let close = document.getElementById('kings-landing-close');
     let closeSecond = document.getElementById('kings-landing');
-    close.parentNode.innerHTML = null ;
+    close.parentNode.innerHTML = null;
     closeSecond.style.visibility = 'hidden';   
 }
 
