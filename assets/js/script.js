@@ -1,12 +1,13 @@
 /**
  * To add new location:
- *  funtion:
- *  name:
- *  house: 
- *  information:  
+ *  index: index number in the array
+ *  funtion: written in camelCase assuming 'open' or 'close' is before it
+ *  name: written as html with a dash (-) between words, all lowercase
+ *  house: all lowercase
+ *  information:
  *  distanceToUser:
- *  currentlyLocated:
- *  discovered:
+ *  currentlyLocated: boolean, initially false
+ *  discovered: boolean, initially false
  */
 let locations = [
     {
@@ -20,7 +21,6 @@ let locations = [
         discovered: false,
 
     },
-
     {
         index: 1,
         function: 'Winterfell',
@@ -31,7 +31,6 @@ let locations = [
         currentlyLocated: false,
         discovered: false,
     }, 
-
     {
         index: 2,
         function: 'Eyrie',
@@ -111,6 +110,8 @@ function travelTo(i) {
     distanceTravelled += locations[i].distanceToUser;
     console.log(distanceTravelled);
     checksCurrentlyLocated(i);
+    addToDistance(i);
+    setCurrentLocation(i);
 }
 
 function checksCurrentlyLocated(i) {
@@ -129,6 +130,19 @@ function closeInfo(i) {
 
     locations[i].currentlyLocated = false;
     checksCurrentlyLocated(i);   
+}
+
+function addToDistance(i) {
+    distanceTravelled += locations[i].distanceToUser;
+    document.getElementById('distance-travelled').innerText = `Distance travelled: ${distanceTravelled} miles`;
+}
+
+function setCurrentLocation(_i) {
+    for (let i = 0; i < locations.length; i++) {
+        if (locations[i].currentlyLocated === true) {
+            document.getElementById('current-location').innerText = `Current location: ${locations[i].name}`;
+        }
+    }
 }
 
 function openKingsLandingInfo() {
