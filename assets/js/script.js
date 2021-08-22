@@ -10,6 +10,7 @@
  */
 let locations = [
     {
+        index: 0,
         function: 'KingsLanding',
         name: 'kings-landing',
         house: 'stark',
@@ -21,6 +22,7 @@ let locations = [
     },
 
     {
+        index: 1,
         function: 'Winterfell',
         name: 'winterfell',
         house: 'stark',
@@ -31,6 +33,7 @@ let locations = [
     }, 
 
     {
+        index: 2,
         function: 'Eyrie',
         name: 'eyrie',
         house: 'find it out',
@@ -40,6 +43,7 @@ let locations = [
         discovered: false,
     }, 
     {
+        index: 3,
         function: 'CastleBlack',
         name: 'castle-black',
         house: 'Night\'s Watch',
@@ -49,6 +53,7 @@ let locations = [
         discovered: false,        
     }, 
     {
+        index: 4,
         function: 'IronIslands',
         name: 'iron-islands',
         house: 'Greyjoy',
@@ -58,6 +63,7 @@ let locations = [
         discovered: false, 
     }, 
     {
+        index: 5,
         function: 'Twins',
         name: 'the-twins',
         house: 'find it out',
@@ -67,6 +73,7 @@ let locations = [
         discovered: false,         
     }, 
     {
+        index: 6,
         function: 'CasterlyRock',
         name: 'casterly-rock',
         house: 'Lannister',
