@@ -98,6 +98,26 @@ img::-webkit-scrollbar {
     top: 550px;
 }
 
+#the-twins-locator {
+    left: 590px;
+    top: 610px;
+}
+
+#the-twins {
+    left: 300px;
+    top: 350px;
+}
+
+#casterly-rock-locator { 
+    left: 425px;
+    top: 825px;
+}
+
+#casterly-rock {
+    left: 100px;
+    top: 700px;
+}
+
 /* Footer */
 footer {
     position: fixed;
