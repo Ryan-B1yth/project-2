@@ -47,7 +47,17 @@ let locations = [
         distanceToUser: 1024,
         currentlyLocated: false,
         discovered: false,        
+    }, 
+    {
+        function: 'IronIslands',
+        name: 'iron-islands',
+        house: 'Greyjoy',
+        information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
+        distanceToUser: 1024,
+        currentlyLocated: false,
+        discovered: false, 
     }
+
 ]
 
 function openInfo(i) {
@@ -106,6 +116,14 @@ function closeCastleBlack() {
     closeInfo(3);
 }
 
+function openIronIslandsInfo() {
+    openInfo(4);
+}
+
+function closeIronIslands() {
+    closeInfo(4);
+}
+
 document.getElementById('kings-landing-locator').addEventListener('click', openKingsLandingInfo);
 
 document.getElementById('winterfell-locator').addEventListener('click', openWinterfellInfo);
@@ -113,3 +131,5 @@ document.getElementById('winterfell-locator').addEventListener('click', openWint
 document.getElementById('eyrie-locator').addEventListener('click', openEyrieInfo);
 
 document.getElementById('castle-black-locator').addEventListener('click', openCastleBlackInfo);
+
+document.getElementById('iron-islands-locator').addEventListener('click', openIronIslandsInfo);

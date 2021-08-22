@@ -88,6 +88,16 @@ img::-webkit-scrollbar {
     top: 75px;
 }
 
+#iron-islands-locator {
+    left: 400px;
+    top: 660px;
+}
+
+#iron-islands {
+    left: 100px;
+    top: 550px;
+}
+
 /* Footer */
 footer {
     position: fixed;
