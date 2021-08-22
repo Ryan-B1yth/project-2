@@ -38,6 +38,15 @@ let locations = [
         distanceToUser: 264,
         currentlyLocated: false,
         discovered: false,
+    }, 
+    {
+        function: 'CastleBlack',
+        name: 'castle-black',
+        house: 'Night\'s Watch',
+        information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
+        distanceToUser: 1024,
+        currentlyLocated: false,
+        discovered: false,        
     }
 ]
 
@@ -89,8 +98,18 @@ function closeEyrie() {
     closeInfo(2);
 }
 
+function openCastleBlackInfo() {
+    openInfo(3);
+}
+
+function closeCastleBlack() {
+    closeInfo(3);
+}
+
 document.getElementById('kings-landing-locator').addEventListener('click', openKingsLandingInfo);
 
 document.getElementById('winterfell-locator').addEventListener('click', openWinterfellInfo);
 
 document.getElementById('eyrie-locator').addEventListener('click', openEyrieInfo);
+
+document.getElementById('castle-black-locator').addEventListener('click', openCastleBlackInfo);

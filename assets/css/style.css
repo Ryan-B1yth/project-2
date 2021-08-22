@@ -78,6 +78,16 @@ img::-webkit-scrollbar {
     top: 290px;
 }
 
+#castle-black-locator {
+    left: 715px;
+    top: 75px;
+}
+
+#castle-black {
+    left: 800px;
+    top: 75px;
+}
+
 /* Footer */
 footer {
     position: fixed;
