@@ -16,7 +16,7 @@ let locations = [
         information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
         distanceToUser: 123,
         currentlyLocated: false,
-        discovered: true,
+        discovered: false,
 
     },
 
@@ -26,7 +26,7 @@ let locations = [
         house: 'stark',
         information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
         distanceToUser: 456,
-        currentlyLocated: true,
+        currentlyLocated: false,
         discovered: false,
     }, 
 
@@ -78,6 +78,8 @@ let locations = [
 
 ]
 
+let distanceTravelled = 0;
+
 function openInfo(i) {
     let info = document.getElementById(locations[i].name);
     info.innerHTML = `
@@ -89,10 +91,27 @@ function openInfo(i) {
             <li>Discovered: ${locations[i].discovered}</li>
         </ul>
         <p>${locations[i].information}</p>
+        <button id="travel${[i]}-btn" onclick="travelTo(${i})">Travel to?</button>
     </div>
     `
+
     info.style.visibility = 'visible';
     return true;
+}
+
+function travelTo(i) {
+    locations[i].currentlyLocated = true;
+    distanceTravelled += locations[i].distanceToUser;
+    console.log(distanceTravelled);
+    checksCurrentlyLocated(i);
+}
+
+function checksCurrentlyLocated(i) {
+    if (locations[i].currentlyLocated === true){
+        document.getElementById(locations[i].name).style.boxShadow = '10px 10px 10px gold';
+    } else {
+        document.getElementById(locations[i].name).style.boxShadow = null;
+    }
 }
 
 function closeInfo(i) {
@@ -100,6 +119,9 @@ function closeInfo(i) {
     let closeSecond = document.getElementById(`${locations[i].name}`);
     close.parentNode.innerHTML = null;
     closeSecond.style.visibility = 'hidden'; 
+
+    locations[i].currentlyLocated = false;
+    checksCurrentlyLocated(i);   
 }
 
 function openKingsLandingInfo() {
