@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap');
+
 html, body {
     margin: 0; 
     padding: 0;
@@ -6,16 +8,12 @@ html, body {
     /* border: 1px solid red; */
     overflow-x: scroll;
     position: relative;
+    font-family: Hina Mincho, Arial, Helvetica, sans-serif;
     
 }
 
-
 img {
     height: 100%;
-}
-
-img::-webkit-scrollbar {
-    width: 0px;
 }
 
 /* Location card and locator */
@@ -35,15 +33,33 @@ img::-webkit-scrollbar {
     width: 15em;
     background-color: rgb(170, 139, 80);
     border: 5px solid rgb(73, 60, 34) ;
+    box-shadow: 0 0 15px #000000, inset 0 0 10px #000000;
+    text-shadow: 0 0 30px #000000;
     border-radius: 5%;
-    padding: 10px;
+    padding: 40px 20px;
     position: absolute;
     z-index: 100;
 }
 
-.location .close {
+.location h2 {
+    text-transform: capitalize;
+}
+
+.location .travel, .close {
     position: absolute;
-    right: 10px;
+    right: 20px;
+    background: transparent;
+    border: unset;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.btn {
+    text-shadow: 0 0 30px #000000;
+}
+
+.hover {
+    cursor: pointer;
 }
 
 /* Locations */
@@ -124,9 +140,10 @@ footer {
     bottom: 0;
     width: 100%;
     height: 50px;
-    background-color: rgba(0, 0, 0);
+    background-color: rgb(71, 71, 71);
     color: white;
     text-align: center;
+    z-index: 100000;
 }
 
 footer div {
@@ -139,6 +156,7 @@ footer div {
 
 #current-location {
     float: left;
+    text-transform: capitalize;
 }
 
 #distance-travelled {

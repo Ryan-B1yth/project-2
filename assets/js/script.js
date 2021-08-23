@@ -89,7 +89,7 @@ let distanceTravelled = 0;
 function openInfo(i) {
     let info = document.getElementById(locations[i].name);
     info.innerHTML = `
-        <button id="${locations[i].name}-close" class="close" onclick="close${locations[i].function}()">Close</button>
+        <button id="${locations[i].name}-close" class="btn close hover" onclick="close${locations[i].function}()">X</button>
         <h2>${locations[i].name}</h2>
         <ul>
             <li>House: ${locations[i].house}</li>
@@ -97,7 +97,7 @@ function openInfo(i) {
             <li>Discovered: ${locations[i].discovered}</li>
         </ul>
         <p>${locations[i].information}</p>
-        <button id="travel${[i]}-btn" onclick="travelTo(${i})">Travel to?</button>
+        <button id="travel${[i]}-btn" class="btn travel hover" onclick="travelTo(${i})">Travel to?</button>
     </div>
     `
 
@@ -115,7 +115,7 @@ function travelTo(i) {
 
 function checksCurrentlyLocated(i) {
     if (locations[i].currentlyLocated === true){
-        document.getElementById(locations[i].name).style.boxShadow = '10px 10px 10px gold';
+        document.getElementById(locations[i].name).style.boxShadow = '0 0 20px #D4AF37, inset 0 0 10px #000000';
     } else {
         document.getElementById(locations[i].name).style.boxShadow = null;
     }
