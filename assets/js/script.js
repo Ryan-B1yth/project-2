@@ -107,10 +107,9 @@ function openInfo(i) {
 
 function travelTo(i) {
     locations[i].currentlyLocated = true;
-    distanceTravelled += locations[i].distanceToUser;
-    console.log(distanceTravelled);
     checksCurrentlyLocated(i);
     addToDistance(i);
+    console.log(distanceTravelled);
     setCurrentLocation(i);
 }
 
