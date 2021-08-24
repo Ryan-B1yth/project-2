@@ -134,6 +134,19 @@ img {
     top: 700px;
 }
 
+/* Completion */
+
+#complete {
+    visibility: hidden;
+    background-color: pink;
+    position: fixed;
+    height: 70px;
+    width: 400px;
+    bottom: 70px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
 /* Footer */
 footer {
     position: fixed;

@@ -85,6 +85,7 @@ let locations = [
 ]
 
 let distanceTravelled = 0;
+let placesDiscovered = {};
 
 function openInfo(i) {
     let info = document.getElementById(locations[i].name);
@@ -111,6 +112,9 @@ function travelTo(i) {
     addToDistance(i);
     console.log(distanceTravelled);
     setCurrentLocation(i);
+    placesDiscovered[`${locations[i].name}`] = `true`;
+    checksDiscoveredPlaces();
+    console.log(placesDiscovered);
 }
 
 function checksCurrentlyLocated(i) {
@@ -141,6 +145,13 @@ function setCurrentLocation(_i) {
         if (locations[i].currentlyLocated === true) {
             document.getElementById('current-location').innerText = `Current location: ${locations[i].name}`;
         }
+    }
+}
+
+function checksDiscoveredPlaces() {
+    if (Object.keys(placesDiscovered).length == locations.length) {
+        let complete = document.getElementById('complete');
+        complete.style.visibility = 'visible';
     }
 }
 
