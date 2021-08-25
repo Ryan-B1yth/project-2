@@ -16,6 +16,27 @@ img {
     height: 100%;
 }
 
+/* Scroll */
+
+#left-scroll, #right-scroll {
+    background-color: rgba(77, 77, 77, 0.5);
+    border: 2px solid rgba(77, 77, 77, 0.8);
+    position: fixed;
+    padding: 15em 2em;
+    top: 47%;
+    transform: translate(0, -50%);
+    color: #FFFFFF;
+    z-index: 100000;
+}
+
+#left-scroll {
+    left: 10px;
+}
+
+#right-scroll {
+    right: 10px;
+}
+
 /* Location card and locator */
 
 .locator {

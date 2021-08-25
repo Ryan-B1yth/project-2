@@ -155,6 +155,18 @@ function checksDiscoveredPlaces() {
     }
 }
 
+function scrollRight() {
+    document.getElementsByTagName('html')[0].style.overflowX = 'unset';
+    window.scrollBy(400, 0);
+    document.getElementsByTagName('body')[0].style.overflowX = 'scroll';
+}
+
+function scrollLeft() {
+    document.getElementsByTagName('html')[0].style.overflowX = 'unset';
+    window.scrollBy(-400, 0);
+    document.getElementsByTagName('body')[0].style.overflowX = 'scroll';
+}
+
 function openKingsLandingInfo() {
     openInfo(0);
 }
@@ -224,3 +236,7 @@ document.getElementById('iron-islands-locator').addEventListener('click', openIr
 document.getElementById('the-twins-locator').addEventListener('click', openTwinsInfo);
 
 document.getElementById('casterly-rock-locator').addEventListener('click', openCasterlyRockInfo);
+
+document.getElementById('right-scroll').addEventListener('click', scrollRight);
+
+document.getElementById('left-scroll').addEventListener('click', scrollLeft);
