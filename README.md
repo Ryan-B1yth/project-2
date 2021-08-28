@@ -1,3 +1,14 @@
+<!-- 
+Todo list
+Onload pannel to explain the game
+Add remaining locations
+Update distances, location info, etc
+Improve css design
+Media quieries
+README
+Code cleanup
+ -->
+
 # Game Of Thrones Interactive Map Game
 
 ![4 size view of the website's home page]()
