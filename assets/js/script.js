@@ -110,11 +110,9 @@ function travelTo(i) {
     locations[i].currentlyLocated = true;
     checksCurrentlyLocated(i);
     addToDistance(i);
-    console.log(distanceTravelled);
     setCurrentLocation(i);
     placesDiscovered[`${locations[i].name}`] = `true`;
-    checksDiscoveredPlaces();
-    console.log(placesDiscovered);
+    locations[i].discovered = true;
 }
 
 function checksCurrentlyLocated(i) {
@@ -133,6 +131,7 @@ function closeInfo(i) {
 
     locations[i].currentlyLocated = false;
     checksCurrentlyLocated(i);   
+    checksDiscoveredPlaces();
 }
 
 function addToDistance(i) {

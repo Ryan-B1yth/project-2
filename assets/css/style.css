@@ -5,11 +5,9 @@ html, body {
     padding: 0;
     box-sizing: border-box;
     max-width: 200%;
-    /* border: 1px solid red; */
     overflow-x: scroll;
     position: relative;
     font-family: Hina Mincho, Arial, Helvetica, sans-serif;
-    
 }
 
 img {
@@ -62,7 +60,7 @@ img {
     z-index: 100;
 }
 
-.location h2 {
+.location h2, .location ul li {
     text-transform: capitalize;
 }
 
@@ -83,7 +81,7 @@ img {
     cursor: pointer;
 }
 
-/* Locations */
+/* Locations and locators */
 
 #kings-landing-locator { 
     left: 775px;
@@ -159,16 +157,21 @@ img {
 
 #complete {
     visibility: hidden;
-    background-color: pink;
+    background-color: rgb(172, 134, 64);
+    border: 2px solid #000000;
+    box-shadow: 0 0 30px #b3b3b3;
+    text-shadow: 0 0 30px #000000;
+    text-align: center;
     position: fixed;
-    height: 70px;
-    width: 400px;
+    padding: 20px 40px;
+    max-width: 30ch;
     bottom: 70px;
     left: 50%;
     transform: translate(-50%);
 }
 
 /* Footer */
+
 footer {
     position: fixed;
     bottom: 0;
