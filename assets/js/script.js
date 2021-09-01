@@ -80,6 +80,16 @@ let locations = [
         distanceToUser: 1024,
         currentlyLocated: false,
         discovered: false,         
+    },
+    {
+        index: 7,
+        function: 'Pentos',
+        name: 'pentos',
+        house: 'Targaryon',
+        information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
+        distanceToUser: 3945,
+        currentlyLocated: false,
+        discovered: false,         
     }
 
 ]
@@ -222,6 +232,14 @@ function closeCasterlyRock() {
     closeInfo(6);
 }
 
+function openPentosInfo() {
+    openInfo(7);
+}
+
+function closePentos() {
+    closeInfo(7);
+}
+
 document.getElementById('kings-landing-locator').addEventListener('click', openKingsLandingInfo);
 
 document.getElementById('winterfell-locator').addEventListener('click', openWinterfellInfo);
@@ -235,6 +253,11 @@ document.getElementById('iron-islands-locator').addEventListener('click', openIr
 document.getElementById('the-twins-locator').addEventListener('click', openTwinsInfo);
 
 document.getElementById('casterly-rock-locator').addEventListener('click', openCasterlyRockInfo);
+
+document.getElementById('pentos-locator').addEventListener('click', openPentosInfo);
+
+
+
 
 document.getElementById('right-scroll').addEventListener('click', scrollRight);
 

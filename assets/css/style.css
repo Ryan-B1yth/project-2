@@ -173,6 +173,16 @@ img {
     top: 700px;
 }
 
+#pentos-locator { 
+    left: 1060px;
+    top: 880px;
+}
+
+#pentos {
+    left: 1150px;
+    top: 800px;
+}
+
 /* Completion */
 
 #complete {
