@@ -25,6 +25,7 @@ img {
     top: 10px;
     left: 10px;
     color: #FFFFFF;
+    z-index: 999999;
 }
 
 #welcome-message button {
@@ -219,7 +220,7 @@ footer div {
     float: right;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1000px) {
     #left-scroll, #right-scroll {
         visibility: hidden;
     }

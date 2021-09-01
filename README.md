@@ -1,6 +1,5 @@
 <!-- 
 Todo list
-Onload pannel to explain the game
 Add remaining locations
 Update distances, location info, etc
 Improve css design
