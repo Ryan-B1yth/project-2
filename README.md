@@ -16,19 +16,26 @@ Code cleanup
 
 ### User Stories           
 - First time visitor goals:
+  - To find an interesting, interactive map of the world of Game of Thrones containing accurate information and locations.
 
 - Returning visitor goals:
+  - To test and improve trivial knowledge of the world and locations.
 
 - Frequent user goals:
+  - To see the map be updated with more locations over time, perhaps separated into larger, main locations, and smaller, world-building locations.
 
 - Site owner goals: 
+  - To provide a fun, interactive, informative map depicting the world of Game of Thrones, and continue to update the map with more locations.
 
 ### Design
 - Color Scheme
+  - Old, worn, rustic design in keeping with the age of the world.
 
 - Typography
+  - Hina Mincho used primarily as due to its old, worn, but still formal typeface.
 
 - Imagery
+  - The map used is of the fictional world of Westeros and Essos created by author George R. R. Martin and is the copywrite material of said author and HBO.
 
 - Wireframes 
 
@@ -37,8 +44,7 @@ Code cleanup
 ## Features
 
 ### Existing features
-- Responsive navigation bar
-- Interactive elements
+- Interactive elements.
 - Responsive design for all screen sizes.
 
 ### Landing Page
@@ -94,10 +100,10 @@ Code cleanup
 
 ### Content
 - Code
+  - All code was written by the developer.
 
 - Content
-
-- Media
+  - The world map was created by author George R. R. Martin and is the copywrite material of said author and HBO. The specific map used was sourced from [A Wiki of Ice and Fire](https://awoiaf.westeros.org/index.php/World_Map_(HBO_Game_Of_Thrones)) and all information was sourced from this [Game of Thrones Wiki](https://gameofthrones.fandom.com/wiki/Game_of_Thrones_Wiki).
 
 ### Artists:
 
