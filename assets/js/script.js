@@ -134,7 +134,7 @@ function calcDistance(i) {
     let top2 = style2.top;
     let yDifference = Math.abs(parseInt(top1) - parseInt(top2));
 
-    let actualDistance = ((Math.sqrt(Math.pow(xDifference, 2) + Math.pow(yDifference, 2))) * 2.794).toFixed(0);
+    let actualDistance = parseInt(((Math.sqrt(Math.pow(xDifference, 2) + Math.pow(yDifference, 2))) * 2.794).toFixed(0));
 
     return actualDistance;
 }
@@ -169,7 +169,7 @@ function closeInfo(i) {
 }
 
 function addToDistance(i) {
-    distanceTravelled += locations[i].distanceToUser;
+    distanceTravelled += calcDistance(i);
     document.getElementById('distance-travelled').innerText = `Distance travelled: ${distanceTravelled} miles`;
 }
 
