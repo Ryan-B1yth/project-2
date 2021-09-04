@@ -96,15 +96,34 @@ let locations = [
 
 let distanceTravelled = 0;
 let placesDiscovered = {};
+let previouslyLocated = 0;
 
 function openInfo(i) {
+    let locator1 = document.getElementById(`${locations[i].name}-locator`);
+
+    let locator2 = document.getElementById(`${locations[previouslyLocated].name}-locator`);
+
+    let style1 = document.defaultView.getComputedStyle(locator1, null);
+
+    let style2 = document.defaultView.getComputedStyle(locator2, null);
+
+    let left1 = style1.left;
+    let left2 = style2.left;
+    let xDifference = Math.abs(parseInt(left1) - parseInt(left2));
+
+    let top1 = style1.top;
+    let top2 = style2.top;
+    let yDifference = Math.abs(parseInt(top1) - parseInt(top2));
+
+    let actualDistance = ((Math.sqrt(Math.pow(xDifference, 2) + Math.pow(yDifference, 2))) * 2.794).toFixed(0);
+
     let info = document.getElementById(locations[i].name);
     info.innerHTML = `
         <button id="${locations[i].name}-close" class="btn close hover" onclick="close${locations[i].function}()">X</button>
         <h2>${locations[i].name}</h2>
         <ul>
             <li>House: ${locations[i].house}</li>
-            <li>Distance to travel: ${locations[i].distanceToUser} miles</li>
+            <li>Distance to travel: ${actualDistance} miles</li>
             <li>Discovered: ${locations[i].discovered}</li>
         </ul>
         <p>${locations[i].information}</p>
@@ -123,6 +142,7 @@ function travelTo(i) {
     setCurrentLocation(i);
     placesDiscovered[`${locations[i].name}`] = `true`;
     locations[i].discovered = true;
+    previouslyLocated = locations[i].index;
 }
 
 function checksCurrentlyLocated(i) {
