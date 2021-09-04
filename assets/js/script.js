@@ -99,6 +99,25 @@ let placesDiscovered = {};
 let previouslyLocated = 0;
 
 function openInfo(i) {
+    let info = document.getElementById(locations[i].name);
+    info.innerHTML = `
+        <button id="${locations[i].name}-close" class="btn close hover" onclick="close${locations[i].function}()">X</button>
+        <h2>${locations[i].name}</h2>
+        <ul>
+            <li>House: ${locations[i].house}</li>
+            <li>Distance to travel: ${calcDistance(i)} miles</li>
+            <li>Discovered: ${locations[i].discovered}</li>
+        </ul>
+        <p>${locations[i].information}</p>
+        <button id="travel${[i]}-btn" class="btn travel hover" onclick="travelTo(${i})">Travel to?</button>
+    </div>
+    `
+
+    info.style.visibility = 'visible';
+    return true;
+}
+
+function calcDistance(i) {
     let locator1 = document.getElementById(`${locations[i].name}-locator`);
 
     let locator2 = document.getElementById(`${locations[previouslyLocated].name}-locator`);
@@ -117,22 +136,7 @@ function openInfo(i) {
 
     let actualDistance = ((Math.sqrt(Math.pow(xDifference, 2) + Math.pow(yDifference, 2))) * 2.794).toFixed(0);
 
-    let info = document.getElementById(locations[i].name);
-    info.innerHTML = `
-        <button id="${locations[i].name}-close" class="btn close hover" onclick="close${locations[i].function}()">X</button>
-        <h2>${locations[i].name}</h2>
-        <ul>
-            <li>House: ${locations[i].house}</li>
-            <li>Distance to travel: ${actualDistance} miles</li>
-            <li>Discovered: ${locations[i].discovered}</li>
-        </ul>
-        <p>${locations[i].information}</p>
-        <button id="travel${[i]}-btn" class="btn travel hover" onclick="travelTo(${i})">Travel to?</button>
-    </div>
-    `
-
-    info.style.visibility = 'visible';
-    return true;
+    return actualDistance;
 }
 
 function travelTo(i) {
