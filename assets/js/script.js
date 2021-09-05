@@ -16,6 +16,7 @@ let locations = [
         name: 'kings-landing',
         house: 'stark',
         information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
+        learnMore: '#',
         distanceToUser: 123,
         currentlyLocated: false,
         discovered: false,
@@ -27,6 +28,7 @@ let locations = [
         name: 'winterfell',
         house: 'stark',
         information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
+        learnMore: '#',
         currentlyLocated: false,
         discovered: false,
     }, 
@@ -36,6 +38,7 @@ let locations = [
         name: 'eyrie',
         house: 'find it out',
         information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
+        learnMore: '#',
         currentlyLocated: false,
         discovered: false,
     }, 
@@ -45,6 +48,7 @@ let locations = [
         name: 'castle-black',
         house: 'Night\'s Watch',
         information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
+        learnMore: '#',
         currentlyLocated: false,
         discovered: false,        
     }, 
@@ -54,6 +58,7 @@ let locations = [
         name: 'iron-islands',
         house: 'Greyjoy',
         information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
+        learnMore: '#',
         currentlyLocated: false,
         discovered: false, 
     }, 
@@ -63,6 +68,7 @@ let locations = [
         name: 'the-twins',
         house: 'find it out',
         information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
+        learnMore: '#',
         currentlyLocated: false,
         discovered: false,         
     }, 
@@ -72,6 +78,7 @@ let locations = [
         name: 'casterly-rock',
         house: 'Lannister',
         information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
+        learnMore: '#',
         currentlyLocated: false,
         discovered: false,         
     },
@@ -81,6 +88,7 @@ let locations = [
         name: 'pentos',
         house: 'Targaryon',
         information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
+        learnMore: '#',
         currentlyLocated: false,
         discovered: false,         
     }
@@ -105,6 +113,7 @@ function openInfo(i) {
             <li>Discovered: ${locations[i].discovered}</li>
         </ul>
         <p>${locations[i].information}</p>
+        <a href="${locations[i].learnMore}" target='_blank' class="btn hover link">Learn more?</a>
         <button id="travel${[i]}-btn" class="btn travel hover" onclick="travelTo(${i})">Travel to?</button>
     </div>
     `
