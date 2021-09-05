@@ -25,7 +25,7 @@ Code cleanup
   - To see the map be updated with more locations over time, perhaps separated into larger, main locations, and smaller, world-building locations.
 
 - Site owner goals: 
-  - To provide a fun, interactive, informative map depicting the world of Game of Thrones, and continue to update the map with more locations.
+  - To provide a fun, interactive, informative map depicting the world of Game of Thrones, and continue to update the map with more locations and to make those updates easy to impliment.
 
 ### Design
 - Color Scheme
@@ -63,6 +63,56 @@ Code cleanup
 - Git
 - GitHub
 - [PicResize](https://picresize.com/)
+
+## Adding a new location 
+
+- To add a new location all three files need to be updated.
+  - HTML
+    - < div id="location-name-locator" class="locator hover">Location Name< /div ></br>
+      < div id="location-name" class="location">< /div >
+  - CSS
+    - #location-name {</br>
+      top: (num)px;</br>
+      left: (num)px;</br>
+      }
+
+    - #location-name-locator {</br>
+      top: (num)px;</br>
+      left: (num)px;</br>
+      }
+  
+    - The CSS top and left coordinates must be static (px). Relative units will alter location and distances as the screen size changes.
+
+  - JavaScript
+    - In the locations array, add an object containing:
+      - {</br>
+        index: x,
+        </br></br>
+        function: 'LocationName', </br>
+        *in camelCase assuming starting at the second word
+        </br></br>
+        name: 'location-name',
+        </br></br>
+        house: '',
+        </br></br>
+        information: 'Lorem ipsum',
+        </br></br>
+        currentlyLocated: false,
+        </br></br>
+        discovered: false,</br>
+        },</br></br>
+
+    - In the open functions section, add:</br></br>
+      - function openLocationNameInfo() {</br>
+        openInfo(x);</br>
+        }
+        </br></br>
+        function closeLocationName() {</br>
+        closeInfo(x);</br>
+        }</br>
+    
+    - In the event Listener section, add:</br>
+      - document.getElementById('location-name-locator').addEventListener('click',          openLocationNameInfo);
 
 ## Testing
 
