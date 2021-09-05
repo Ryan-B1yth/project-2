@@ -102,7 +102,7 @@ Code cleanup
         discovered: false,</br>
         },</br></br>
 
-    - In the open functions section, add:</br></br>
+    - In the open info functions section, add:</br></br>
       - function openLocationNameInfo() {</br>
         openInfo(x);</br>
         }
@@ -111,7 +111,7 @@ Code cleanup
         closeInfo(x);</br>
         }</br>
     
-    - In the event Listener section, add:</br>
+    - In the Event Listener section, add:</br>
       - document.getElementById('location-name-locator').addEventListener('click',          openLocationNameInfo);
 
 ## Testing
