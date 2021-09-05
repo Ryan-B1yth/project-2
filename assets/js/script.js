@@ -91,6 +91,9 @@ let distanceTravelled = 0;
 let placesDiscovered = {};
 let previouslyLocated = 0;
 
+/**
+ * Pulls information from locations array using a given index number and pushes that to the HTML to be added to the page and styled by existing CSS.
+ */
 function openInfo(i) {
     let info = document.getElementById(locations[i].name);
     info.innerHTML = `
@@ -110,14 +113,15 @@ function openInfo(i) {
     return true;
 }
 
+/**
+ * Uses CSS px coordinates to calculated the real distance between two locators. Returns a number rounded to 0 decimal places.
+ */
 function calcDistance(i) {
-    let locator1 = document.getElementById(`${locations[i].name}-locator`);
-
-    let locator2 = document.getElementById(`${locations[previouslyLocated].name}-locator`);
+    let locator1 = document.getElementById(`${locations[i].name}-locator`); // Selected locator
+    let locator2 = document.getElementById(`${locations[previouslyLocated].name}-locator`); // Last location travelled to
 
     let style1 = document.defaultView.getComputedStyle(locator1, null);
-
-    let style2 = document.defaultView.getComputedStyle(locator2, null);
+    let style2 = document.defaultView.getComputedStyle(locator2, null); // Allows the reading of CSS values
 
     let left1 = style1.left;
     let left2 = style2.left;
@@ -126,12 +130,16 @@ function calcDistance(i) {
     let top1 = style1.top;
     let top2 = style2.top;
     let yDifference = Math.abs(parseInt(top1) - parseInt(top2));
+    // Finds the distance between top and left px distances of each locator and uses them to form a triangle with the hypotenuse being the straight line distance between previous and selected location.
 
-    let actualDistance = parseInt(((Math.sqrt(Math.pow(xDifference, 2) + Math.pow(yDifference, 2))) * 2.794).toFixed(0));
+    let actualDistance = parseInt(((Math.sqrt(Math.pow(xDifference, 2) + Math.pow(yDifference, 2))) * 2.794).toFixed(0)); // Pythagorean theorem finds hypotenuse length and multiplies by 'in world' distance of 1px in miles.
 
     return actualDistance;
 }
 
+/**
+ * 'Sends' player to that location, fires functions to change style of info card, add distance travelled to total distance.
+ */
 function travelTo(i) {
     locations[i].currentlyLocated = true;
     checksCurrentlyLocated(i);
@@ -142,6 +150,9 @@ function travelTo(i) {
     previouslyLocated = locations[i].index;
 }
 
+/**
+ * Checks through locations array for object with currentlyLocated = true and changes style to give a 'glow'.
+ */
 function checksCurrentlyLocated(i) {
     if (locations[i].currentlyLocated === true){
         document.getElementById(locations[i].name).style.boxShadow = '0 0 20px #D4AF37, inset 0 0 10px #000000';
@@ -150,6 +161,9 @@ function checksCurrentlyLocated(i) {
     }
 }
 
+/**
+ * Closes open info card by removing HTML and changing visibility to hidden. Changes currently located to false.
+ */
 function closeInfo(i) {
     let close = document.getElementById(`${locations[i].name}-close`);
     let closeSecond = document.getElementById(`${locations[i].name}`);
@@ -161,11 +175,17 @@ function closeInfo(i) {
     checksDiscoveredPlaces();
 }
 
+/**
+ * Adds the calculated distance to the total distance travelled.
+ */
 function addToDistance(i) {
     distanceTravelled += calcDistance(i);
     document.getElementById('distance-travelled').innerText = `Distance travelled: ${distanceTravelled} miles`;
 }
 
+/**
+ * Checks through locations array for currentlyLocated = true and sets the current location in the footer to that location name. 
+ */
 function setCurrentLocation(_i) {
     for (let i = 0; i < locations.length; i++) {
         if (locations[i].currentlyLocated === true) {
@@ -174,6 +194,9 @@ function setCurrentLocation(_i) {
     }
 }
 
+/**
+ * Checks the placesDiscovered object length and compares it against the locations array length. Once the two are the same, the end game congratulations in shown.
+ */
 function checksDiscoveredPlaces() {
     if (Object.keys(placesDiscovered).length == locations.length) {
         let complete = document.getElementById('complete');
@@ -181,17 +204,25 @@ function checksDiscoveredPlaces() {
     }
 }
 
+/**
+ * Allows the right button to scroll the page 400 pixels right.
+ */
 function scrollRight() {
     document.getElementsByTagName('html')[0].style.overflowX = 'unset';
     window.scrollBy(400, 0);
     document.getElementsByTagName('body')[0].style.overflowX = 'scroll';
 }
 
+/**
+ * Allows the right button to scroll the page 400 pixels left.
+ */
 function scrollLeft() {
     document.getElementsByTagName('html')[0].style.overflowX = 'unset';
     window.scrollBy(-400, 0);
     document.getElementsByTagName('body')[0].style.overflowX = 'scroll';
 }
+
+// Open info section
 
 function openKingsLandingInfo() {
     openInfo(0);
@@ -256,6 +287,8 @@ function openPentosInfo() {
 function closePentos() {
     closeInfo(7);
 }
+
+// Event Listener section
 
 document.getElementById('kings-landing-locator').addEventListener('click', openKingsLandingInfo);
 
