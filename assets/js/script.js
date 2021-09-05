@@ -1,22 +1,11 @@
-/**
- * To add new location:
- *  index: index number in the array
- *  funtion: written in camelCase assuming 'open' or 'close' is before it
- *  name: written as html with a dash (-) between words, all lowercase
- *  house: all lowercase
- *  information:
- *  distanceToUser:
- *  currentlyLocated: boolean, initially false
- *  discovered: boolean, initially false
- */
 let locations = [
     {
         index: 0,
         function: 'KingsLanding',
         name: 'kings-landing',
         house: 'stark',
-        information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
-        learnMore: '#',
+        information: "King's Landing is the capital, and largest city, of the Six Kingdoms. Located on the east coast of Westeros in the Crownlands, just north of where the Blackwater Rush flows into Blackwater Bay and overlooking Blackwater Bay, King's Landing is the site of the Iron Throne and the Red Keep, the seat of the King of the Andals and the First Men.",
+        learnMore: 'https://gameofthrones.fandom.com/wiki/King%27s_Landing',
         distanceToUser: 123,
         currentlyLocated: false,
         discovered: false,
@@ -27,8 +16,8 @@ let locations = [
         function: 'Winterfell',
         name: 'winterfell',
         house: 'stark',
-        information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
-        learnMore: '#',
+        information: "Winterfell is the capital of the Kingdom of the North and the seat and the ancestral home of the royal House Stark. It is a very large castle located at the center of the North, from where the head of House Stark rules over his or her people. A small godswood is enclosed within the walls.",
+        learnMore: 'https://gameofthrones.fandom.com/wiki/Winterfell',
         currentlyLocated: false,
         discovered: false,
     }, 
@@ -314,9 +303,6 @@ document.getElementById('the-twins-locator').addEventListener('click', openTwins
 document.getElementById('casterly-rock-locator').addEventListener('click', openCasterlyRockInfo);
 
 document.getElementById('pentos-locator').addEventListener('click', openPentosInfo);
-
-
-
 
 document.getElementById('right-scroll').addEventListener('click', scrollRight);
 
