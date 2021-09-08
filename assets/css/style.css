@@ -76,6 +76,7 @@ img {
 
 .location {
     visibility: hidden;
+    min-width: 25ch;
     max-width: 25ch;
     background-color: rgb(170, 139, 80);
     border: 5px solid rgb(73, 60, 34);
@@ -89,6 +90,14 @@ img {
 
 .location h2, .location ul li {
     text-transform: capitalize;
+}
+
+h3 {
+    font-size: inherit;
+    font-weight: inherit;
+    text-transform: lowercase;
+    padding: 0;
+    margin: 0;
 }
 
 .location .travel, .close {
@@ -119,13 +128,13 @@ img {
 /* Locations and locators */
 
 #kings-landing-locator { 
-    left: 775px;
     top: 870px;
+    left: 775px;
 }
 
 #kings-landing {
-    left: 670px;
     top: 500px;
+    left: 670px;
 }
 
 #winterfell-locator {
@@ -139,63 +148,63 @@ img {
 }
 
 #eyrie-locator {
-    left: 780px;
     top: 660px;
+    left: 780px;
 }
 
 #eyrie {
-    left: 780px;
     top: 290px;
+    left: 780px;
 }
 
 #castle-black-locator {
-    left: 715px;
     top: 75px;
+    left: 715px;
 }
 
 #castle-black {
-    left: 800px;
     top: 75px;
+    left: 800px;
 }
 
 #iron-islands-locator {
-    left: 400px;
     top: 660px;
+    left: 400px;
 }
 
 #iron-islands {
-    left: 100px;
     top: 550px;
+    left: 100px;
 }
 
 #the-twins-locator {
-    left: 590px;
     top: 610px;
+    left: 590px;
 }
 
 #the-twins {
-    left: 300px;
     top: 350px;
+    left: 300px;
 }
 
 #casterly-rock-locator { 
-    left: 425px;
     top: 825px;
+    left: 425px;
 }
 
 #casterly-rock {
-    left: 100px;
     top: 700px;
+    left: 100px;
 }
 
 #pentos-locator { 
-    left: 1060px;
     top: 880px;
+    left: 1060px;
 }
 
 #pentos {
-    left: 1150px;
     top: 800px;
+    left: 1150px;
 }
 
 /* Completion */
