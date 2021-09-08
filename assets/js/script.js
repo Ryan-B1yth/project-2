@@ -98,7 +98,7 @@ function openInfo(i) {
         <h2>${locations[i].name}</h2>
         <ul>
             <li>House: ${locations[i].house}</li>
-            <li>Distance to travel: ${calcDistance(i)} miles</li>
+            <li>Distance from ${locations[previouslyLocated].name}: ${calcDistance(i)} miles <h3>(as the crow flies)</h3></li>
             <li>Discovered: ${locations[i].discovered}</li>
         </ul>
         <p>${locations[i].information}</p>
