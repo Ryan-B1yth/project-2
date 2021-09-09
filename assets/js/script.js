@@ -87,28 +87,42 @@ let locations = [
 let distanceTravelled = 0;
 let placesDiscovered = {};
 let previouslyLocated = 0;
+let openCards = 0;
 
 /**
- * Pulls information from locations array using a given index number and pushes that to the HTML to be added to the page and styled by existing CSS.
+ * Pulls information from locations array using a given index number and pushes that to the HTML to be added to the page and styled by existing CSS. Only allows 1 card to be open at a time.
  */
 function openInfo(i) {
-    let info = document.getElementById(locations[i].name);
-    info.innerHTML = `
-        <button id="${locations[i].name}-close" class="btn close hover" onclick="close${locations[i].function}()">X</button>
-        <h2>${locations[i].name}</h2>
-        <ul>
-            <li>House: ${locations[i].house}</li>
-            <li>Distance from ${locations[previouslyLocated].name}: ${calcDistance(i)} miles <h3>(as the crow flies)</h3></li>
-            <li>Discovered: ${locations[i].discovered}</li>
-        </ul>
-        <p>${locations[i].information}</p>
-        <a href="${locations[i].learnMore}" target='_blank' class="btn hover link">Learn more?</a>
-        <button id="travel${[i]}-btn" class="btn travel hover" onclick="travelTo(${i})">Travel to?</button>
-    </div>
-    `
-
-    info.style.visibility = 'visible';
-    return true;
+    if (openCards >= 1) {
+        return false;
+    } else {
+        let info = document.getElementById(locations[i].name);
+        info.innerHTML = `
+            <button id="${locations[i].name}-close" class="btn close hover" onclick="close${locations[i].function}()">X</button>
+            <h2>${locations[i].name}</h2>
+            <ul>
+                <li>House: ${locations[i].house}</li>
+                <li>Distance from ${locations[previouslyLocated].name}: ${calcDistance(i)} miles <h3>(as the crow flies)</h3></li>
+                <li>Discovered: ${locations[i].discovered}</li>
+            </ul>
+            <p>${locations[i].information}</p>
+            <a href="${locations[i].learnMore}" target='_blank' class="btn hover link">Learn more?</a>
+            <button id="travel${[i]}-btn" class="btn travel hover" onclick="travelTo(${i})">Travel to?</button>
+        </div>
+        `
+        info.style.visibility = 'visible';
+        
+        if (checksDiscoveredPlaces() === true) {
+            for (let n = 0; n <= locations.length; n++) {
+                if (locations[i].discovered === true) {
+                    document.getElementsByClassName('link')[0].style.visibility = 'visible';
+                }
+            }
+        }
+        
+        openCards++;
+        return true;
+    }
 }
 
 /**
@@ -171,6 +185,7 @@ function closeInfo(i) {
     locations[i].currentlyLocated = false;
     checksCurrentlyLocated(i);   
     checksDiscoveredPlaces();
+    openCards--;
 }
 
 /**
@@ -199,6 +214,7 @@ function checksDiscoveredPlaces() {
     if (Object.keys(placesDiscovered).length == locations.length) {
         let complete = document.getElementById('complete');
         complete.style.visibility = 'visible';
+        return true;
     }
 }
 

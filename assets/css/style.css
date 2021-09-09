@@ -111,6 +111,7 @@ h3 {
 
 .link {
     color: #000000;
+    visibility: hidden;
 }
 
 .link:hover {
