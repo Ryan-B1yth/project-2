@@ -119,7 +119,7 @@ function openInfo(i) {
                 }
             }
         }
-        
+
         openCards++;
         return true;
     }
@@ -302,6 +302,13 @@ function closePentos() {
     closeInfo(7);
 }
 
+// End Card
+
+function closeEndCard() {
+    let complete = document.getElementById('complete');
+    complete.style.zIndex = '-1';
+}
+
 // Event Listener section
 
 document.getElementById('kings-landing-locator').addEventListener('click', openKingsLandingInfo);
@@ -323,3 +330,5 @@ document.getElementById('pentos-locator').addEventListener('click', openPentosIn
 document.getElementById('right-scroll').addEventListener('click', scrollRight);
 
 document.getElementById('left-scroll').addEventListener('click', scrollLeft);
+
+document.getElementById('closeEndCard').addEventListener('click', closeEndCard);
