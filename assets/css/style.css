@@ -58,13 +58,14 @@ img {
 /* Location card and locator */
 
 .locator {
-    height: 50px;
-    width: 50px;
+    height: 35px;
+    width: 35px;
     background-color: rgba(255, 255, 255, 0.5);
     border: 2px solid rgba(77, 77, 77, 0.5);
     border-radius: 50%;
     position: absolute;
     transition: all 500ms ease-in-out;
+    color: transparent;
 }
 
 .locator:hover {
@@ -86,11 +87,17 @@ img {
     padding: 40px 20px;
     position: absolute;
     z-index: 100;
+    /* transition: all 200ms ease-in-out; */
 }
 
 .location h2, .location ul li {
     text-transform: capitalize;
 }
+
+/* .location:hover {
+    transition: all 200ms ease-in-out;
+    transform: scale(1.05);
+} */
 
 h3 {
     font-size: inherit;
@@ -139,8 +146,8 @@ h3 {
 }
 
 #winterfell-locator {
-    top: 300px;
-    left: 620px;
+    top: 305px;
+    left: 625px;
 }
 
 #winterfell {
@@ -149,8 +156,8 @@ h3 {
 }
 
 #eyrie-locator {
-    top: 660px;
-    left: 780px;
+    top: 670px;
+    left: 793px;
 }
 
 #eyrie {
@@ -159,8 +166,8 @@ h3 {
 }
 
 #castle-black-locator {
-    top: 75px;
-    left: 715px;
+    top: 85px;
+    left: 720px;
 }
 
 #castle-black {
@@ -169,8 +176,8 @@ h3 {
 }
 
 #iron-islands-locator {
-    top: 660px;
-    left: 400px;
+    top: 665px;
+    left: 395px;
 }
 
 #iron-islands {
@@ -180,7 +187,7 @@ h3 {
 
 #the-twins-locator {
     top: 610px;
-    left: 590px;
+    left: 598px;
 }
 
 #the-twins {
@@ -189,7 +196,7 @@ h3 {
 }
 
 #casterly-rock-locator { 
-    top: 825px;
+    top: 830px;
     left: 425px;
 }
 
@@ -200,7 +207,7 @@ h3 {
 
 #pentos-locator { 
     top: 880px;
-    left: 1060px;
+    left: 1068px;
 }
 
 #pentos {
@@ -209,8 +216,8 @@ h3 {
 }
 
 #braavos-locator { 
-    top: 600px;
-    left: 1060px;
+    top: 595px;
+    left: 1065px;
 }
 
 #braavos {
@@ -219,8 +226,8 @@ h3 {
 }
 
 #volantis-locator { 
-    top: 1230px;
-    left: 1330px;
+    top: 1240px;
+    left: 1340px;
 }
 
 #volantis {
@@ -229,8 +236,8 @@ h3 {
 }
 
 #valyria-locator { 
-    top: 1460px;
-    left: 1540px;
+    top: 1468px;
+    left: 1547px;
 }
 
 #valyria {
@@ -239,8 +246,8 @@ h3 {
 }
 
 #qarth-locator { 
-    top: 1370px;
-    left: 2400px;
+    top: 1373px;
+    left: 2406px;
 }
 
 #qarth {
@@ -249,8 +256,8 @@ h3 {
 }
 
 #dorne-locator { 
-    top: 1190px;
-    left: 660px;
+    top: 1196px;
+    left: 662px;
 }
 
 #dorne {
@@ -259,8 +266,8 @@ h3 {
 }
 
 #meereen-locator { 
-    top: 1100px;
-    left: 1900px;
+    top: 1120px;
+    left: 1896px;
 }
 
 #meereen {
@@ -269,8 +276,8 @@ h3 {
 }
 
 #vaes-dothrak-locator { 
-    top: 760px;
-    left: 2170px;
+    top: 764px;
+    left: 2174px;
 }
 
 #vaes-dothrak {
