@@ -261,7 +261,7 @@ h3 {
 }
 
 #dorne {
-    top: 900px;
+    top: 850px;
     left: 250px;
 }
 
@@ -344,5 +344,11 @@ footer div {
 @media screen and (max-width: 1000px) {
     #left-scroll, #right-scroll {
         visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 465px) {
+    footer {
+        height: 70px;
     }
 }

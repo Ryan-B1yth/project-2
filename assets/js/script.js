@@ -3,7 +3,7 @@ let locations = [
         index: 0,
         function: 'KingsLanding',
         name: 'kings-landing',
-        house: 'stark',
+        house: 'Baratheon',
         information: "King's Landing is the capital, and largest city, of the Six Kingdoms. Located on the east coast of Westeros in the Crownlands, just north of where the Blackwater Rush flows into Blackwater Bay and overlooking Blackwater Bay, King's Landing is the site of the Iron Throne and the Red Keep, the seat of the King of the Andals and the First Men.",
         learnMore: 'https://gameofthrones.fandom.com/wiki/King%27s_Landing',
         distanceToUser: 123,
