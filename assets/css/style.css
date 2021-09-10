@@ -218,6 +218,66 @@ h3 {
     left: 1150px;
 }
 
+#volantis-locator { 
+    top: 1230px;
+    left: 1330px;
+}
+
+#volantis {
+    top: 900px;
+    left: 1430px;
+}
+
+#valyria-locator { 
+    top: 1460px;
+    left: 1540px;
+}
+
+#valyria {
+    top: 950px;
+    left: 1400px;
+}
+
+#qarth-locator { 
+    top: 1370px;
+    left: 2400px;
+}
+
+#qarth {
+    top: 950px;
+    left: 2000px;
+}
+
+#dorne-locator { 
+    top: 1190px;
+    left: 660px;
+}
+
+#dorne {
+    top: 900px;
+    left: 250px;
+}
+
+#meereen-locator { 
+    top: 1100px;
+    left: 1900px;
+}
+
+#meereen {
+    top: 850px;
+    left: 1500px;
+}
+
+#vaes-dothrak-locator { 
+    top: 760px;
+    left: 2170px;
+}
+
+#vaes-dothrak {
+    top: 600px;
+    left: 1800px;
+}
+
 /* Completion */
 
 #complete {

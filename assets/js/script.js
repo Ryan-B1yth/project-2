@@ -91,6 +91,66 @@ let locations = [
         currentlyLocated: false,
         discovered: false,         
     },
+    {
+        index: 9,
+        function: 'Volantis',
+        name: 'volantis',
+        house: 'Unknown',
+        information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
+        learnMore: '#',
+        currentlyLocated: false,
+        discovered: false,         
+    },
+    {
+        index: 10,
+        function: 'Valyria',
+        name: 'valyria',
+        house: 'Unknown',
+        information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
+        learnMore: '#',
+        currentlyLocated: false,
+        discovered: false,         
+    },
+    {
+        index: 11,
+        function: 'Qarth',
+        name: 'qarth',
+        house: 'Unknown',
+        information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
+        learnMore: '#',
+        currentlyLocated: false,
+        discovered: false,         
+    },
+    {
+        index: 12,
+        function: 'Dorne',
+        name: 'dorne',
+        house: 'Unknown',
+        information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
+        learnMore: '#',
+        currentlyLocated: false,
+        discovered: false,         
+    },
+    {
+        index: 13,
+        function: 'Meereen',
+        name: 'meereen',
+        house: 'Unknown',
+        information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
+        learnMore: '#',
+        currentlyLocated: false,
+        discovered: false,         
+    },
+    {
+        index: 14,
+        function: 'VaesDothrak',
+        name: 'vaes-dothrak',
+        house: 'Unknown',
+        information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
+        learnMore: '#',
+        currentlyLocated: false,
+        discovered: false,         
+    },
 
 ]
 
@@ -320,6 +380,54 @@ function closeBraavos() {
     closeInfo(8);
 }
 
+function openVolantisInfo() {
+    openInfo(9);
+}
+
+function closeVolantis() {
+    closeInfo(9);
+}
+
+function openValyriaInfo() {
+    openInfo(10);
+}
+
+function closeValyria() {
+    closeInfo(10);
+}
+
+function openQarthInfo() {
+    openInfo(11);
+}
+
+function closeQarth() {
+    closeInfo(11);
+}
+
+function openDorneInfo() {
+    openInfo(12);
+}
+
+function closeDorne() {
+    closeInfo(12);
+}
+
+function openMeereenInfo() {
+    openInfo(13);
+}
+
+function closeMeereen() {
+    closeInfo(13);
+}
+
+function openVaesDothrakInfo() {
+    openInfo(14);
+}
+
+function closeVaesDothrak() {
+    closeInfo(14);
+}
+
 // End Card
 
 function closeEndCard() {
@@ -346,6 +454,18 @@ document.getElementById('casterly-rock-locator').addEventListener('click', openC
 document.getElementById('pentos-locator').addEventListener('click', openPentosInfo);
 
 document.getElementById('braavos-locator').addEventListener('click', openBraavosInfo);
+
+document.getElementById('volantis-locator').addEventListener('click', openVolantisInfo);
+
+document.getElementById('valyria-locator').addEventListener('click', openValyriaInfo);
+
+document.getElementById('qarth-locator').addEventListener('click', openQarthInfo);
+
+document.getElementById('dorne-locator').addEventListener('click', openDorneInfo);
+
+document.getElementById('meereen-locator').addEventListener('click', openMeereenInfo);
+
+document.getElementById('vaes-dothrak-locator').addEventListener('click', openVaesDothrakInfo);
 
 document.getElementById('right-scroll').addEventListener('click', scrollRight);
 
