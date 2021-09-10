@@ -214,7 +214,7 @@ function calcDistance(i) {
     let yDifference = Math.abs(parseInt(top1) - parseInt(top2));
     // Finds the distance between top and left px distances of each locator and uses them to form a triangle with the hypotenuse being the straight line distance between previous and selected location.
 
-    let actualDistance = parseInt(((Math.sqrt(Math.pow(xDifference, 2) + Math.pow(yDifference, 2))) * 2.794).toFixed(0)); // Pythagorean theorem finds hypotenuse length and multiplies by 'in world' distance of 1px in miles.
+    let actualDistance = parseInt(((Math.sqrt(Math.pow(xDifference, 2) + Math.pow(yDifference, 2))) * 2.827).toFixed(0)); // Pythagorean theorem finds hypotenuse length and multiplies by 'in world' distance of 1px in miles.
 
     return actualDistance;
 }
