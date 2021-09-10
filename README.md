@@ -1,16 +1,8 @@
-<!-- 
-Todo list
-Add remaining locations
-Update distances, location info, etc
-Improve css design
-Media quieries
-README
-Code cleanup
- -->
-
 # Game Of Thrones Interactive Map Game
 
 ![4 size view of the website's home page]()
+
+This Game of Thrones interactive map game is designed to provide information to the player in a fun way. The clickable locations reveal various information to the player and allow them to 'travel' to each location. An interesting aspect of this is each card will show the 'in-world' distance to any other location on the map. At the end of the game, once all the locations have been discovered, more information is available on each card that links to an external site.
 
 ## User Experience (UX)
 
@@ -38,6 +30,10 @@ Code cleanup
   - The map used is of the fictional world of Westeros and Essos created by author George R. R. Martin and is the copywrite material of said author and HBO.
 
 - Wireframes 
+  - General map with arrows to navigate and the location displayed in the bottom corner.
+  <img src="assets/images/documentation/wireframe1.jpg" height=200px alt="A crudely drawn map with arrows to allow navigation and the location displayed in the bottom corner">
+  - Information card above a location.
+  <img src="assets/images/documentation/wireframe2.jpg" height=200px alt="Information card above a location.">
 
 <!-- HTML used instead of markdown to control image size as images were very large when testing. -->
 
@@ -48,6 +44,8 @@ Code cleanup
 - Responsive design for all screen sizes.
 
 ### Landing Page
+- The page loads with a map of the world and a card explaining the site's intent.
+- Clickable locations that reveal information cards with various facts about each location including the distance from said location to the previous location travelled to. 
 
 ## Features to be implimented
 
@@ -122,6 +120,8 @@ Code cleanup
 
   - [W3C CSS Validator]()
 
+  - [Javascript Validator]()
+
 ### Known bugs
 
 ## Further testing
@@ -154,8 +154,6 @@ Code cleanup
 
 - Content
   - The world map was created by author George R. R. Martin and is the copywrite material of said author and HBO. The specific map used was sourced from [A Wiki of Ice and Fire](https://awoiaf.westeros.org/index.php/World_Map_(HBO_Game_Of_Thrones)) and all information was sourced from this [Game of Thrones Wiki](https://gameofthrones.fandom.com/wiki/Game_of_Thrones_Wiki).
-
-### Artists:
 
 ### Acknowledgements
     
