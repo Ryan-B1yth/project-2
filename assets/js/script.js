@@ -80,7 +80,17 @@ let locations = [
         learnMore: '#',
         currentlyLocated: false,
         discovered: false,         
-    }
+    },
+    {
+        index: 8,
+        function: 'Braavos',
+        name: 'braavos',
+        house: 'Unknown',
+        information: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, voluptates nisi dolorem dicta voluptas maxime hic porro, aperiam laborum minima eaque laudantium error praesentium illum. Nam perferendis autem delectus ea!',
+        learnMore: '#',
+        currentlyLocated: false,
+        discovered: false,         
+    },
 
 ]
 
@@ -302,6 +312,14 @@ function closePentos() {
     closeInfo(7);
 }
 
+function openBraavosInfo() {
+    openInfo(8);
+}
+
+function closeBraavos() {
+    closeInfo(8);
+}
+
 // End Card
 
 function closeEndCard() {
@@ -326,6 +344,8 @@ document.getElementById('the-twins-locator').addEventListener('click', openTwins
 document.getElementById('casterly-rock-locator').addEventListener('click', openCasterlyRockInfo);
 
 document.getElementById('pentos-locator').addEventListener('click', openPentosInfo);
+
+document.getElementById('braavos-locator').addEventListener('click', openBraavosInfo);
 
 document.getElementById('right-scroll').addEventListener('click', scrollRight);
 

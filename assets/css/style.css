@@ -208,6 +208,16 @@ h3 {
     left: 1150px;
 }
 
+#braavos-locator { 
+    top: 600px;
+    left: 1060px;
+}
+
+#braavos {
+    top: 200px;
+    left: 1150px;
+}
+
 /* Completion */
 
 #complete {
