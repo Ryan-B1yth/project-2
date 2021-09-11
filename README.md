@@ -1,6 +1,6 @@
 # Game Of Thrones Interactive Map Game
 
-![4 size view of the website's home page]()
+![4 size view of the website's home page](assets/images/documentation/amIResonsive.PNG)
 
 This Game of Thrones interactive map game is designed to provide information to the player in a fun way. The clickable locations reveal various information to the player and allow them to 'travel' to each location. An interesting aspect of this is each card will show the 'in-world' distance to any other location on the map. At the end of the game, once all the locations have been discovered, more information is available on each card that links to an external site.
 
@@ -117,9 +117,9 @@ This Game of Thrones interactive map game is designed to provide information to 
 
 - The original project was constructed on a laptop with a screen size of 12.3 inches. The code was also put through W3C validators and passed through without any issues.
 
-  - [W3C Markup Validator]()
+  - [W3C Markup Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fryan-b1yth.github.io%2Fwelcome-to-westeros%2F)
 
-  - [W3C CSS Validator]()
+  - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fryan-b1yth.github.io%2Fwelcome-to-westeros%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
   - [Javascript Validator - Jshint]()
 
