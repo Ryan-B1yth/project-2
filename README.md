@@ -42,6 +42,7 @@ This Game of Thrones interactive map game is designed to provide information to 
 ### Existing features
 - Interactive elements.
 - Responsive design for all screen sizes.
+- Links to external sources for information.
 
 ### Landing Page
 - The page loads with a map of the world and a card explaining the site's intent.
@@ -120,18 +121,18 @@ This Game of Thrones interactive map game is designed to provide information to 
 
   - [W3C CSS Validator]()
 
-  - [Javascript Validator]()
+  - [Javascript Validator - Jshint]()
 
 ### Known bugs
 
 ## Further testing
-- The site was tested on Google Chrome using their developer tools and viewed on Firefox and Microsoft Edge to ensure it worked across multiple platforms. The site was also viewed on multiple devices of varying screen sizes.
+- The site was tested on Google Chrome using their developer tools and viewed on Firefox and Microsoft Edge to ensure it worked across multiple platforms. During development, on changing the screen size and using the implimented Left and Right buttons the page reverted to the full size of the image, pushing the footer down and opening a large white space between the base of the image and the footer. However on actual use, this doesn't happen so I'm attributing this to the developer tools stuggling to scroll the window at an unexpected screen size. The site was also viewed on multiple devices of varying screen sizes and this continued to not be an issue in actual use.
 
 - Google Chrome's DevTools Lighthouse:
   - Desktop
-        ![Lighthouse score for desktop]()
+        ![Lighthouse score for desktop](assets/images/documentation/lighthouse-desktop.PNG)
   - Mobile
-        ![Lighthouse score for mobile]()
+        ![Lighthouse score for mobile](assets/images/documentation/lighthouse-mobile.PNG)
 
 ## Deployment 
 - The site was deployed to GitHub pages. The steps to deploy are as follows:
