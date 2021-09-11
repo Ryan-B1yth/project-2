@@ -60,8 +60,14 @@ This Game of Thrones interactive map game is designed to provide information to 
 
   - ![End card](assets/images/documentation/screenshot3.PNG)
 
+## Known bugs
 
-## Features to be implimented
+- Text contained in buttons is not styled with the same font as the rest of the page. 
+
+## Future updates
+
+  - Add more locations
+  - Remove dashes from inbetween location names
 
 ## Languages Used
 
