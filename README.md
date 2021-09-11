@@ -49,7 +49,17 @@ This Game of Thrones interactive map game is designed to provide information to 
 
 ### Landing Page
 - The page loads with a map of the world and a card explaining the site's intent.
+
+  - ![Landing page map and card](assets/images/documentation/screenshot1.PNG)
+
 - Clickable locations that reveal information cards with various facts about each location including the distance from said location to the previous location travelled to. 
+
+  - ![Open information card](assets/images/documentation/screenshot2.PNG)
+
+- End game card once all locations are found.
+
+  - ![End card](assets/images/documentation/screenshot3.PNG)
+
 
 ## Features to be implimented
 
