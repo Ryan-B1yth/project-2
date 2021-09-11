@@ -152,7 +152,7 @@ let locations = [
         discovered: false,         
     },
 
-]
+];
 
 let distanceTravelled = 0;
 let placesDiscovered = {};
@@ -179,7 +179,7 @@ function openInfo(i) {
             <a href="${locations[i].learnMore}" target='_blank' class="btn hover link">Learn more?</a>
             <button id="travel${[i]}-btn" class="btn travel hover" onclick="travelTo(${i})">Travel to?</button>
         </div>
-        `
+        `;
         info.style.visibility = 'visible';
         
         if (checksDiscoveredPlaces() === true) {
@@ -306,7 +306,7 @@ function scrollLeft() {
     document.getElementsByTagName('body')[0].style.overflowX = 'scroll';
 }
 
-// Open info section
+// Open information section
 
 function openKingsLandingInfo() {
     openInfo(0);
