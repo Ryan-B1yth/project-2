@@ -31,9 +31,12 @@ This Game of Thrones interactive map game is designed to provide information to 
 
 - Wireframes 
   - General map with arrows to navigate and the location displayed in the bottom corner.
-  <img src="assets/images/documentation/wireframe1.jpg" height=200px alt="A crudely drawn map with arrows to allow navigation and the location displayed in the bottom corner">
+
+    - <img src="assets/images/documentation/wireframe1.jpg" height=200px alt="A crudely drawn map with arrows to allow navigation and the location displayed in the bottom corner">
+
   - Information card above a location.
-  <img src="assets/images/documentation/wireframe2.jpg" height=200px alt="Information card above a location.">
+
+    - <img src="assets/images/documentation/wireframe2.jpg" height=200px alt="Information card above a location.">
 
 <!-- HTML used instead of markdown to control image size as images were very large when testing. -->
 
@@ -115,7 +118,7 @@ This Game of Thrones interactive map game is designed to provide information to 
 
 ## Testing
 
-- The original project was constructed on a laptop with a screen size of 12.3 inches. The code was also put through W3C validators and passed through without any issues.
+- The original project was constructed on a laptop with a screen size of 12.3 inches. The code was also put through validators and passed through without any issues.
 
   - [W3C Markup Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fryan-b1yth.github.io%2Fwelcome-to-westeros%2F)
 
@@ -126,6 +129,7 @@ This Game of Thrones interactive map game is designed to provide information to 
   <img src="assets/images/documentation/jshint2.PNG">
 
   - Unused functions flagged in the validator are used but can only be accessed after firing other functions first. All unused functions are contained within the openInfo function.
+  - The JavaScript code was passed with /* jshint esversion: 6 */ above it which removed warnings for setting variables with 'let'.
 
 ### Known bugs
 
