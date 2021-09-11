@@ -92,7 +92,7 @@ This Game of Thrones interactive map game is designed to provide information to 
         </br></br>
         name: 'location-name',
         </br></br>
-        house: '',
+        house or rulers: '',
         </br></br>
         information: 'Lorem ipsum',
         </br></br>
@@ -121,7 +121,11 @@ This Game of Thrones interactive map game is designed to provide information to 
 
   - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fryan-b1yth.github.io%2Fwelcome-to-westeros%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
-  - [Javascript Validator - Jshint]()
+  - Javascript Validator - JShint
+  <img src="assets/images/documentation/jshint1.PNG">
+  <img src="assets/images/documentation/jshint2.PNG">
+
+  - Unused functions flagged in the validator are used but can only be accessed after firing other functions first. All unused functions are contained within the openInfo function.
 
 ### Known bugs
 
@@ -142,7 +146,7 @@ This Game of Thrones interactive map game is designed to provide information to 
   - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 <!-- Deployment code and content taken straight from Code Institutes README template -->
 
-- You can view the live site [here]().
+- You can view the live site [here](https://ryan-b1yth.github.io/welcome-to-westeros/).
 
 ## Credits 
 
