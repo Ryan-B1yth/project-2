@@ -428,6 +428,12 @@ function closeVaesDothrak() {
     closeInfo(14);
 }
 
+// Welcome card
+
+function closeWelcome() {
+    this.parentNode.style.visibility = 'hidden';
+}
+
 // End Card
 
 function closeEndCard() {
@@ -436,6 +442,8 @@ function closeEndCard() {
 }
 
 // Event Listener section
+
+document.getElementById('welcome').addEventListener('click', closeWelcome);
 
 document.getElementById('kings-landing-locator').addEventListener('click', openKingsLandingInfo);
 
