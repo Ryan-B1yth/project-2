@@ -58,16 +58,13 @@ This Game of Thrones interactive map game is designed to provide information to 
 
 - End game card once all locations are found.
 
-  - ![End card](assets/images/documentation/screenshot3.PNG)
-
-## Known bugs
-
-- Text contained in buttons is not styled with the same font as the rest of the page. 
+  - ![End card](assets/images/documentation/screenshot3.PNG) 
 
 ## Future updates
 
   - Add more locations
   - Remove dashes from inbetween location names
+  - Have locators permanently change color when a location is discovered
 
 ## Languages Used
 
