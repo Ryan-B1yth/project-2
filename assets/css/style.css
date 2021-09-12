@@ -40,6 +40,7 @@ img {
     background-color: rgba(77, 77, 77, 0.5);
     border: 2px solid rgba(77, 77, 77, 0.8);
     position: fixed;
+    text-align: center;
     padding: 15em 0;
     width: 5em;
     top: 47%;
@@ -102,6 +103,10 @@ h3 {
     margin: 0;
 }
 
+p {
+    padding-bottom: 20px;
+}
+
 .location .travel, .close {
     position: absolute;
     right: 20px;
@@ -111,9 +116,15 @@ h3 {
     font-size: 1.5em;
 }
 
+.travel {
+    bottom: 10px;
+}
+
 .link {
     color: #000000;
     visibility: hidden;
+    position: absolute;
+    bottom: 15px;
 }
 
 .link:hover {
@@ -121,6 +132,7 @@ h3 {
 }
 
 .btn {
+    padding: 10px;
     text-shadow: 0 0 30px #000000;
 }
 
@@ -296,6 +308,10 @@ h3 {
     left: 50%;
     transform: translate(-50%);
     z-index: 999999;
+}
+
+#complete p {
+    padding-bottom: unset;
 }
 
 #complete #closeEndCard {
