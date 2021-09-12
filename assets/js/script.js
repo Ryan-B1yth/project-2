@@ -168,7 +168,7 @@ function openInfo(i) {
     } else {
         let info = document.getElementById(locations[i].name);
         info.innerHTML = `
-            <button id="${locations[i].name}-close" class="btn close hover" onclick="close${locations[i].function}()">X</button>
+            <div id="${locations[i].name}-close" class="btn close hover" onclick="close${locations[i].function}()">X</div>
             <h2>${locations[i].name}</h2>
             <ul>
                 <li>House or Rulers: ${locations[i].house}</li>
@@ -177,7 +177,7 @@ function openInfo(i) {
             </ul>
             <p>${locations[i].information}</p>
             <a href="${locations[i].learnMore}" target='_blank' class="btn hover link">Learn more?</a>
-            <button id="travel${[i]}-btn" class="btn travel hover" onclick="travelTo(${i})">Travel to?</button>
+            <div id="travel${[i]}-btn" class="btn travel hover" onclick="travelTo(${i})">Travel to?</div>
         </div>
         `;
         info.style.visibility = 'visible';
@@ -289,7 +289,7 @@ function checksDiscoveredPlaces() {
 }
 
 /**
- * Allows the right button to scroll the page 400 pixels right.
+ * Allows the right div to scroll the page 400 pixels right.
  */
 function scrollRight() {
     document.getElementsByTagName('html')[0].style.overflowX = 'unset';
@@ -298,7 +298,7 @@ function scrollRight() {
 }
 
 /**
- * Allows the right button to scroll the page 400 pixels left.
+ * Allows the left div to scroll the page 400 pixels left.
  */
 function scrollLeft() {
     document.getElementsByTagName('html')[0].style.overflowX = 'unset';
